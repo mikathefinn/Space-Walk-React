@@ -1,15 +1,26 @@
 import { useState } from 'react'
-import Welcome from './components/Welcome'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
+import Welcome from './components/Welcome'
+import Header from './components/Header'
 
 function App() {
-
-
   return (
-    <div className='wrapper-main'>
-   <Welcome />
-  
-    </div>
+    <>
+      <Router>
+        <Routes>
+          <Route
+            path='/'
+            element={
+              <div className='wrapper-main'>
+                <Header />
+                <Welcome />
+              </div>
+            }
+          />
+        </Routes>
+      </Router>
+    </>
   )
 }
 

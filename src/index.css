@@ -1,30 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,300&family=Montserrat:wght@400;500;600&family=Open+Sans:wght@400;600&display=swap');
 html {
   font-size: 62.5%;
 }
 
 body {
   font-size: 1.6rem;
-  font-family: 'Montserrat', sans-serif;
-  background-color: grey;
+  font-family: 'Montserrat';
+  margin: 0 auto;
+  background-color: black;
 }
 
 .wrapper-main {
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   color: white;
   background-image: url('../public/images/stars-bg-90.jpg');
-  background-size: cover; 
-
+  background-size: cover;
 }
 
-.main-headers {
-  display: flex;
-  flex-direction: column;
-}
-.welcome-h1,
-.space-h2 {
-  font-size: 3.6rem;
+.navlink {
+  text-decoration: none;
+  font-size: 4rem;
+  letter-spacing: 0.1rem;
+  font-size: medium;
+  color: white;
 }
