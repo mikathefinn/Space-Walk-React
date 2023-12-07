@@ -4,7 +4,13 @@ import { useState, useEffect } from 'react'
 import mars from '/public/images/mars.png'
 
 const Headers = styled.div`
-padding-top: 6rem;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding-top: 4rem;
   font-size: 3.6rem;
   letter-spacing: 0.7rem;
   opacity: ${({ isVisible }) => (isVisible ? '1' : '0')};
@@ -12,21 +18,15 @@ padding-top: 6rem;
 
   display: flex;
   flex-direction: row;
-justify-content: space-around;
-align-items: center;
+  justify-content: space-around;
+  align-items: center;
 
   h2 {
     padding: 1rem 0 0 8rem;
   }
   img {
-    width: 30%
+    width: 40%;
   }
-
-  .headers (
-
-    display: flex;
-    flex-direction: column;
-  )
 `
 
 function Welcome() {
@@ -41,7 +41,7 @@ function Welcome() {
   return (
     <>
       <Headers isVisible={isVisible}>
-        <div className='Headers.headers'>
+        <div>
           <h1>Welcome to</h1>
           <h2>SpaceWalk</h2>
         </div>

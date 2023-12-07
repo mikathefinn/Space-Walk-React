@@ -1,18 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-
-const Nav = styled.nav`
-  display: flex;
-`
-const LinkList = styled.ul`
-  flex-basis: 50%;
-  padding: 6rem 0 0 8rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-size: 4rem;
-`
+import {LinkList, Nav, NavLink} from '../styles/HeaderStyles'
 
 const Header = () => {
   return (
@@ -20,29 +8,29 @@ const Header = () => {
       <Nav>
         <LinkList className='link-ul'>
           <li>
-            <Link className='navlink' to='/'>
+            <NavLink className='navlink' to='/'>
               Home
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link className='navlink' to='/rovers'>
+            <NavLink className='navlink' to='/rovers'>
               Rovers
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link className='navlink' to='/weather'>
+            <NavLink className='navlink' to='/weather'>
               Weather
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link className='navlink' to='/facts'>
+            <NavLink className='navlink' to='/facts'>
               Facts
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link className='navlink' to='/about'>
+            <NavLink className='navlink' to='/about'>
               About
-            </Link>
+            </NavLink>
           </li>
         </LinkList>
       </Nav>
