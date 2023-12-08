@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Rovers from './pages/Rovers'
 import Welcome from './components/Welcome'
 import Header from './components/Header'
+import Curiosity from './pages/Curiosity'
 
 function App() {
   return (
@@ -24,6 +25,14 @@ function App() {
             element={
               <div>
                 <Rovers />
+              </div>
+            }
+          />
+          <Route
+            path='/curiosity'
+            element={
+              <div>
+                <Curiosity />
               </div>
             }
           />
