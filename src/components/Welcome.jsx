@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { useState, useEffect } from 'react'
 import mars from '/public/images/mars.png'
 
+
 const Headers = styled.div`
   width: 100%;
   position: absolute;
@@ -14,7 +15,9 @@ const Headers = styled.div`
   font-size: 3.6rem;
   letter-spacing: 0.7rem;
   opacity: ${({ isVisible }) => (isVisible ? '1' : '0')};
-  transition: opacity 3s ease;
+  filter: blur(${({ isVisible }) => (isVisible ? '0' : '5px')}); 
+  transition: opacity 3s ease, filter 4.5s ease;
+  
 
   display: flex;
   flex-direction: row;

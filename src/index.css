@@ -6,6 +6,7 @@ html {
 body {
   font-size: 1.6rem;
   font-family: 'Montserrat';
+  letter-spacing: 0.14rem;
   margin: 0 auto;
   background-color: black;
 }
@@ -16,11 +17,3 @@ body {
   background-image: url('../public/images/stars-bg-90.jpg');
   background-size: cover;
 }
-/* 
-.navlink {
-  text-decoration: none;
-  font-size: 4rem;
-  letter-spacing: 0.1rem;
-  font-size: medium;
-  color: white;
-} */

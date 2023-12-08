@@ -1,36 +1,25 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import {LinkList, Nav, NavLink} from '../styles/HeaderStyles'
+import { LinkList, Nav, NavLink } from '../styles/HeaderStyles'
 
 const Header = () => {
   return (
     <header>
       <Nav>
-        <LinkList className='link-ul'>
+        <LinkList>
           <li>
-            <NavLink className='navlink' to='/'>
-              Home
-            </NavLink>
+            <NavLink to='/'>Home</NavLink>
           </li>
           <li>
-            <NavLink className='navlink' to='/rovers'>
-              Rovers
-            </NavLink>
+            <NavLink to='/rovers'>Rovers</NavLink>
           </li>
           <li>
-            <NavLink className='navlink' to='/weather'>
-              Weather
-            </NavLink>
+            <NavLink to='/weather'>Weather</NavLink>
           </li>
           <li>
-            <NavLink className='navlink' to='/facts'>
-              Facts
-            </NavLink>
+            <NavLink to='/facts'>Facts</NavLink>
           </li>
           <li>
-            <NavLink className='navlink' to='/about'>
-              About
-            </NavLink>
+            <NavLink to='/about'>About</NavLink>
           </li>
         </LinkList>
       </Nav>
