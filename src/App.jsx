@@ -6,6 +6,7 @@ import Welcome from './components/Welcome'
 import Header from './components/Header'
 import Curiosity from './pages/Curiosity'
 import Weather from './pages/Weather'
+import Slideshow from './pages/Slideshow'
 function App() {
   return (
     <>
@@ -42,6 +43,15 @@ function App() {
             element={
               <div>
                 <Weather />
+              </div>
+            }
+          />
+
+          <Route
+            path='/slideshow'
+            element={
+              <div>
+                <Slideshow />
               </div>
             }
           />
