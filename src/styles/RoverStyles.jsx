@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-export const Rovers = styled.div`
+export const Rover = styled.div`
   height: 100vh;
   color: white;
   background-image: url('public/images/mars-bg.jpg');
