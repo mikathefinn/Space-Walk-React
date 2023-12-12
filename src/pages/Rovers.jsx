@@ -7,7 +7,7 @@ import perseverance from '/public/images/perseverance.png'
 
 function Rovers() {
   return (
-    <Rover>
+    <Rovers>
       <Header />
       <Main>
         <h1>Mars rovers</h1>
@@ -33,7 +33,7 @@ function Rovers() {
           </div>
         </section>
       </Main>
-    </Rover>
+    </Rovers>
   )
 }
 

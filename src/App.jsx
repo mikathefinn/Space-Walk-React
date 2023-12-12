@@ -5,7 +5,7 @@ import Rovers from './pages/Rovers'
 import Welcome from './components/Welcome'
 import Header from './components/Header'
 import Curiosity from './pages/Curiosity'
-
+import Weather from './pages/Weather'
 function App() {
   return (
     <>
@@ -33,6 +33,15 @@ function App() {
             element={
               <div>
                 <Curiosity />
+              </div>
+            }
+          />
+
+          <Route
+            path='/weather'
+            element={
+              <div>
+                <Weather />
               </div>
             }
           />
