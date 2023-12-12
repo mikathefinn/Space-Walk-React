@@ -1,15 +1,15 @@
 import React from 'react'
 import Header from '../components/Header'
-import { Rover, Main } from '../styles/RoverStyles'
+import {Main, Rover} from '../styles/RoverStyles'
 import { NavLink } from '../styles/HeaderStyles'
 import curiosity from '/public/images/curiosity.jpeg'
 import perseverance from '/public/images/perseverance.png'
 
 function Rovers() {
   return (
-    <Rovers>
+    <Rover>
       <Header />
-      <Main>
+    <Main>
         <h1>Mars rovers</h1>
         <p className='intro'>
           There are currently two rovers in operation on the surface of Mars,
@@ -33,7 +33,7 @@ function Rovers() {
           </div>
         </section>
       </Main>
-    </Rovers>
+    </Rover>
   )
 }
 
