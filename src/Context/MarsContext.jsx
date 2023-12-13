@@ -7,7 +7,7 @@ export const MarsProvider = ({ children }) => {
   const [slideshowImage, setSlideshowImage] = useState(placeholder)
 
   return (
-    <MarsContext.Provider value={{ slideshowImage }}>
+    <MarsContext.Provider value={{ slideshowImage, setSlideshowImage }}>
       {children}
     </MarsContext.Provider>
   )

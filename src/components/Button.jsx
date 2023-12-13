@@ -1,7 +1,10 @@
 import React from 'react'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
+import MarsContext from '../Context/MarsContext'
 
 function Button() {
+  const { slideshowImage, setSlideshowImage } = useContext(MarsContext)
+
   const [slideshow, setSlideshow] = useState(false)
   const [buttonText, setButtonText] = useState('Start the slideshow')
 
@@ -19,7 +22,14 @@ function Button() {
         `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=${randomSol}&api_key=ew009QLOkglDGuTtrFtdyQy8oCVTw2KI7gf4VOzQ`
       )
       const photosData = await photosResponse.json()
-      console.log(photosData)
+      //photosData.photos is an array of objects from a randomly selected sol
+      //accessing a random image in that object and retrieving it's source url
+      const randomImageSrc =
+        photosData.photos[
+          Math.floor(Math.random() * photosData.photos.length + 1)
+        ].img_src
+      //set the random image as the image that'll be displayed in Slides.jsx
+      setSlideshowImage(randomImageSrc)
     } catch (error) {
       console.log('error fetching data', error)
     }
