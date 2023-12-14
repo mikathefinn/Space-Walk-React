@@ -14,9 +14,13 @@ export const SlideshowStyles = styled.section`
   }
   .data p {
     margin: 0;
-    padding: 0 0 0.5rem 2rem;
+    padding: 0 0 0.8rem 2rem;
   }
   .data:last-child {
     margin-bottom: 3rem;
+  }
+  button {
+    padding: 0.9rem 2rem;
+    background-color: blue;
   }
 `
