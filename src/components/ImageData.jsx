@@ -5,13 +5,13 @@ import MarsContext from '../Context/MarsContext'
 
 
 function ImageData() {
+const {date, sol} = useContext(MarsContext)
 
-    
   return (
     <div className='data'>
-    <p className='date'></p>
-    <p className='sol'></p>
-    <p className='camera'></p>
+    <p className='date'>{date}</p>
+    <p className='sol'>{sol}</p>
+   
   </div>
   )
 }

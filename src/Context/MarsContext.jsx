@@ -5,6 +5,10 @@ const MarsContext = createContext()
 
 export const MarsProvider = ({ children }) => {
   const [slideshowImage, setSlideshowImage] = useState(placeholder)
+const [date, setDate]=useState('')
+const [sol, setSol]= useState('')
+
+
 
   async function getAndDisplayImage() {
     try {
@@ -18,7 +22,7 @@ export const MarsProvider = ({ children }) => {
       )
 
       const randomSol =
-        filteredData[Math.floor(Math.random() * filteredData.length + 1)].sol
+        filteredData[Math.floor(Math.random() * filteredData.length)].sol
 
       const photosResponse = await fetch(
         `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=${randomSol}&api_key=ew009QLOkglDGuTtrFtdyQy8oCVTw2KI7gf4VOzQ`
@@ -32,13 +36,15 @@ export const MarsProvider = ({ children }) => {
       )
 
       //choose the source url of a random image from the filteredPhotos
-      const randomImgSrc =
-        filteredPhotos[
-          Math.floor(Math.random() * filteredPhotos.length + 1)
-        ].img_src
+      const randomImgObj =
+        filteredPhotos[Math.floor(Math.random() * filteredPhotos.length)]
 
-     console.log(randomImgSrc);
-      setSlideshowImage(randomImgSrc)
+      console.log(randomImgObj)
+      setSlideshowImage(randomImgObj.img_src)
+      // set the data to be displayed
+setDate(`Earth date: ${randomImgObj.earth_date}`)
+setSol(`Mars sol: ${randomImgObj.sol}`)
+
     } catch (error) {
       console.log('error fetching data', error)
     }
@@ -46,7 +52,7 @@ export const MarsProvider = ({ children }) => {
 
   return (
     <MarsContext.Provider
-      value={{ slideshowImage, setSlideshowImage, getAndDisplayImage }}>
+      value={{ slideshowImage, setSlideshowImage, date, sol, getAndDisplayImage }}>
       {children}
     </MarsContext.Provider>
   )
