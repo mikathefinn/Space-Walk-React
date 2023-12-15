@@ -1,7 +1,9 @@
 import React from 'react'
-import { LinkList, Nav, NavLink } from '../styles/HeaderStyles'
+import { useState } from 'react'
+import { LinkList, Nav, NavLink, NavLinkDrop } from '../styles/HeaderStyles'
 
 const Header = () => {
+  
   return (
     <header>
       <Nav>
@@ -10,7 +12,16 @@ const Header = () => {
             <NavLink to='/'>Home</NavLink>
           </li>
           <li>
-            <NavLink to='/rovers'>Rovers</NavLink>
+            <div
+              className='dropdown'>
+            
+              <NavLink to='/rovers'>Rovers</NavLink>
+
+              <div className='dropdown-content'>
+                <NavLinkDrop to='/Curiosity'>Curiosity</NavLinkDrop>
+                <NavLinkDrop to='/Slideshow'>Images</NavLinkDrop>
+              </div>
+            </div>
           </li>
           <li>
             <NavLink to='/weather'>Weather</NavLink>

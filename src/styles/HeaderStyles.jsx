@@ -9,6 +9,27 @@ export const LinkList = styled.ul`
   flex-direction: row;
   justify-content: space-between;
   font-size: 4rem;
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 20rem;
+    
+    box-shadow: 0 0.8rem 1.6rem 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown-content:hover {
+  display: block;
+}
+
 `
 export const Nav = styled.nav`
   display: flex;
@@ -37,4 +58,12 @@ export const NavLink = styled(Link)`
       opacity: 1;
     }
   }
+`
+export const NavLinkDrop = styled(Link)`
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 2rem;
+  color: white;
+  position: relative;
+  display: block;
 `
