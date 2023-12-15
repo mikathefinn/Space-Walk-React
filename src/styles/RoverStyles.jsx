@@ -17,7 +17,7 @@ export const RoverC = styled.div`
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
 `
 
 export const Main = styled.main`
@@ -31,7 +31,7 @@ export const Main = styled.main`
   border-radius: 0.5rem;
 
   h1 {
-    padding: 8rem 0 6rem 0;
+    padding: 6rem 0 6rem 0;
     font-size: 3.2rem;
   }
   .intro {
@@ -90,16 +90,25 @@ export const Main = styled.main`
     padding: 0 1rem;
     border-radius: 1rem;
   }
+`
+export const WeatherDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  min-height: 80%;
+ 
+  margin: 0 auto;
+
   iframe {
-    max-height: 620px;
-    margin: auto;
-    width: 90%;
-    height: 80%;
+    width: 100rem;
+    height: 57rem;
     border-radius: 0.5rem;
   }
 `
+
 export const Anchor = styled(Link)`
-  
   font-size: inherit;
   font-size: medium;
   color: #07ebf7;

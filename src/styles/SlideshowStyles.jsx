@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
 export const SlideshowStyles = styled.section`
+display: flex; 
+flex-direction: column;
+align-items: center;
+gap: 4rem;
   .latest-image {
     margin-bottom: 2rem;
   }
@@ -20,7 +24,12 @@ export const SlideshowStyles = styled.section`
     margin-bottom: 3rem;
   }
   button {
-    padding: 0.9rem 2rem;
-    background-color: blue;
+    width: 80%;
+    padding: 1rem 3rem;
+    border-radius: 3rem;
+    background-color: #ff8800b8;
+    color: white;
+    letter-spacing: 0.18rem;
+    font-size: 1.7rem
   }
 `

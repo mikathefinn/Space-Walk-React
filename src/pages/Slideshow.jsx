@@ -2,13 +2,13 @@ import React from 'react'
 import Header from '../components/Header'
 import Slides from '../components/Slides'
 
-import { Main, Rover } from '../styles/RoverStyles'
+import { Main, RoverC } from '../styles/RoverStyles'
 
 
 function Slideshow() {
   return (
     <>
-      <Rover>
+      <RoverC>
         <Header />
         <Main>
           <h1>Images taken by Curiosity in Mars</h1>
@@ -26,7 +26,7 @@ function Slideshow() {
           </p>
           <Slides />
         </Main>
-      </Rover>
+      </RoverC>
     </>
   )
 }
