@@ -7,6 +7,7 @@ import Header from './components/Header'
 import Curiosity from './pages/Curiosity'
 import Weather from './pages/Weather'
 import Slideshow from './pages/Slideshow'
+import Facts from './pages/Facts'
 import MarsContext, { MarsProvider } from './Context/MarsContext'
 
 function App() {
@@ -55,6 +56,14 @@ function App() {
               element={
                 <div>
                   <Slideshow />
+                </div>
+              }
+            />
+            <Route
+              path='/facts'
+              element={
+                <div>
+                  <Facts />
                 </div>
               }
             />

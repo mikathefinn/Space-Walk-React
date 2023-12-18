@@ -62,7 +62,7 @@ export const NavLink = styled(Link)`
 export const NavLinkDrop = styled(Link)`
   text-decoration: none;
   padding: 1rem;
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: white;
   position: relative;
   display: block;

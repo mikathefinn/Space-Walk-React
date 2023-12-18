@@ -5,10 +5,8 @@ const MarsContext = createContext()
 
 export const MarsProvider = ({ children }) => {
   const [slideshowImage, setSlideshowImage] = useState(placeholder)
-const [date, setDate]=useState('')
-const [sol, setSol]= useState('')
-
-
+  const [date, setDate] = useState('')
+  const [sol, setSol] = useState('')
 
   async function getAndDisplayImage() {
     try {
@@ -16,7 +14,7 @@ const [sol, setSol]= useState('')
         'https://api.nasa.gov/mars-photos/api/v1/manifests/curiosity?api_key=ew009QLOkglDGuTtrFtdyQy8oCVTw2KI7gf4VOzQ'
       )
       const data = await response.json()
-      //filter through the photos to find ones with MAST camera
+      //filter through the photos to find ones with FHAZ camera
       const filteredData = data.photo_manifest.photos.filter((item) =>
         item.cameras.includes('FHAZ')
       )
@@ -42,9 +40,8 @@ const [sol, setSol]= useState('')
       console.log(randomImgObj)
       setSlideshowImage(randomImgObj.img_src)
       // set the data to be displayed
-setDate(`Earth date: ${randomImgObj.earth_date}`)
-setSol(`Mars sol: ${randomImgObj.sol}`)
-
+      setDate(`Earth date: ${randomImgObj.earth_date}`)
+      setSol(`Mars sol: ${randomImgObj.sol}`)
     } catch (error) {
       console.log('error fetching data', error)
     }
@@ -52,7 +49,15 @@ setSol(`Mars sol: ${randomImgObj.sol}`)
 
   return (
     <MarsContext.Provider
-      value={{ slideshowImage, setSlideshowImage, date, sol, getAndDisplayImage }}>
+      value={{
+        slideshowImage,
+        setSlideshowImage,
+        date,
+        setDate,
+        sol,
+        setSol,
+        getAndDisplayImage,
+      }}>
       {children}
     </MarsContext.Provider>
   )
