@@ -3,7 +3,6 @@ import { useState } from 'react'
 import { LinkList, Nav, NavLink, NavLinkDrop } from '../styles/HeaderStyles'
 
 const Header = () => {
-  
   return (
     <header>
       <Nav>
@@ -12,14 +11,17 @@ const Header = () => {
             <NavLink to='/'>Home</NavLink>
           </li>
           <li>
-            <div
-              className='dropdown'>
-            
+            <div className='dropdown'>
               <NavLink to='/rovers'>Rovers</NavLink>
 
               <div className='dropdown-content'>
-                <NavLinkDrop to='/Curiosity'>Curiosity</NavLinkDrop>
-                <NavLinkDrop to='/Slideshow'>Images</NavLinkDrop>
+                <div className='dropdown-submenu'>
+                  <NavLinkDrop to='/Curiosity'>Curiosity</NavLinkDrop>
+                  <NavLinkDrop to='/Curiosity'>Perseverance</NavLinkDrop>
+                <div className="dropdown-submenu-content">
+                <NavLinkDrop to='/Slideshow'>Slideshow</NavLinkDrop>
+                </div>
+              </div>
               </div>
             </div>
           </li>

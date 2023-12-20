@@ -18,18 +18,34 @@ export const LinkList = styled.ul`
   .dropdown-content {
     display: none;
     position: absolute;
-    min-width: 20rem;
-    
-    box-shadow: 0 0.8rem 1.6rem 0 rgba(0, 0, 0, 0.2);
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    min-width: 10rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.8rem 1rem 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
   }
   .dropdown:hover .dropdown-content {
     display: block;
   }
   .dropdown-content:hover {
-  display: block;
-}
-
+    display: block;
+  }
+  .dropdown-submenu {
+    position: relative;
+  }
+  .dropdown-submenu-content {
+    background-color: rgba(0, 0, 0, 0.2);
+    display: none;
+    position: absolute;
+    padding: 1rem 0.5rem 1rem 1rem;
+    top: -1rem;
+    left: 100%;
+    box-shadow: 0 0.8rem 1rem 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  .dropdown-submenu:hover .dropdown-submenu-content {
+    display: block;
+  }
 `
 export const Nav = styled.nav`
   display: flex;

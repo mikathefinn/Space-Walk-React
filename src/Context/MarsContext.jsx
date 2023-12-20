@@ -7,6 +7,7 @@ export const MarsProvider = ({ children }) => {
   const [slideshowImage, setSlideshowImage] = useState(placeholder)
   const [date, setDate] = useState('')
   const [sol, setSol] = useState('')
+  const [camera, setCamera] = useState('')
 
   async function getAndDisplayImage() {
     try {
@@ -42,6 +43,7 @@ export const MarsProvider = ({ children }) => {
       // set the data to be displayed
       setDate(`Earth date: ${randomImgObj.earth_date}`)
       setSol(`Mars sol: ${randomImgObj.sol}`)
+      setCamera(`Camera: ${randomImgObj.camera.full_name}`)
     } catch (error) {
       console.log('error fetching data', error)
     }
@@ -56,6 +58,8 @@ export const MarsProvider = ({ children }) => {
         setDate,
         sol,
         setSol,
+        camera,
+        setCamera,
         getAndDisplayImage,
       }}>
       {children}

@@ -78,6 +78,7 @@ export const Main = styled.main`
     margin-bottom: 2rem;
   }
   .para {
+  
     width: 80%;
     margin-bottom: 2rem;
     text-indent: 1rem;

@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from 'react'
 import MarsContext from '../Context/MarsContext'
 
 function Button() {
-  const { getAndDisplayImage,  setDate,  setSol } =
+  const { getAndDisplayImage,  setDate,  setSol, setCamera } =
     useContext(MarsContext)
 
   const [slideshow, setSlideshow] = useState(false)
@@ -21,6 +21,7 @@ function Button() {
       clearInterval(intervalId)
       setDate('')
       setSol('')
+      setCamera('')
     }
 
     // Cleanup interval when the slideshow is stopped

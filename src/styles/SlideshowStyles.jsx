@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
 export const SlideshowStyles = styled.section`
-display: flex; 
-flex-direction: column;
-align-items: center;
-gap: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
   .latest-image {
     margin-bottom: 2rem;
   }
@@ -30,6 +30,8 @@ gap: 4rem;
     background-color: #ff8800b8;
     color: white;
     letter-spacing: 0.18rem;
-    font-size: 1.7rem
+    font-size: 1.7rem;
+    border: none;
+    box-shadow: 0.1rem 0.1rem 0.2rem #483d2f;
   }
 `

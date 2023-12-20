@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { useState, useEffect } from 'react'
 import mars from '/public/images/mars.png'
-
+import { Link } from 'react-router-dom'
 
 const Headers = styled.div`
   width: 100%;
@@ -15,9 +15,8 @@ const Headers = styled.div`
   font-size: 3.6rem;
   letter-spacing: 0.7rem;
   opacity: ${({ isVisible }) => (isVisible ? '1' : '0')};
-  filter: blur(${({ isVisible }) => (isVisible ? '0' : '5px')}); 
+  filter: blur(${({ isVisible }) => (isVisible ? '0' : '5px')});
   transition: opacity 3s ease, filter 4.5s ease;
-  
 
   display: flex;
   flex-direction: row;
@@ -28,8 +27,17 @@ const Headers = styled.div`
     padding: 1rem 0 0 8rem;
   }
   img {
-    width: 40%;
+    width: 100%;
+    padding-left: 15rem;
   }
+  .wrap {
+    display: flex;
+    align-items: center;
+  }
+  .wrap:first-child {
+    flex-basis: 50%;
+  }
+  
 `
 
 function Welcome() {
@@ -44,11 +52,16 @@ function Welcome() {
   return (
     <>
       <Headers isVisible={isVisible}>
-        <div>
-          <h1>Welcome to</h1>
-          <h2>SpaceWalk</h2>
+        <div className='wrap'>
+          <div className='container'>
+            <h1>Welcome to</h1>
+            <h2>SpaceWalk</h2>
+          </div>
+
+          <Link to='/Facts'>
+            <img src={mars} alt='Mars' />
+          </Link>
         </div>
-        <img src={mars} alt='Mars' />
       </Headers>
     </>
   )

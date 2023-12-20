@@ -8,7 +8,7 @@ import Curiosity from './pages/Curiosity'
 import Weather from './pages/Weather'
 import Slideshow from './pages/Slideshow'
 import Facts from './pages/Facts'
-import MarsContext, { MarsProvider } from './Context/MarsContext'
+import  { MarsProvider } from './Context/MarsContext'
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
               path='/'
               element={
                 <div className='wrapper-main'>
-                  <Header />
+                  {/* <Header /> */}
                   <Welcome />
                 </div>
               }
