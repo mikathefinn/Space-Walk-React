@@ -67,8 +67,8 @@ export const Main = styled.main`
   .text-img {
     width: 80%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
     margin-bottom: 2rem;
   }
   .para-one {
@@ -78,7 +78,6 @@ export const Main = styled.main`
     margin-bottom: 2rem;
   }
   .para {
-  
     width: 80%;
     margin-bottom: 2rem;
     text-indent: 1rem;
@@ -86,10 +85,33 @@ export const Main = styled.main`
   .para:last-of-type {
     margin-bottom: 6rem;
   }
-  .curiart {
-    width: 50%;
+  .para-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+  }
+  .rover-art {
+    max-width: 50%;
     padding: 0 1rem;
     border-radius: 1rem;
+  }
+
+  .perse-header {
+    font-size: 2.8rem;
+    margin: 6rem 0;
+  }
+  .perse-map {
+    margin-bottom: 3rem;
+  }
+  .location{
+    width: 80%;
+    margin-bottom: 4rem;
+  }
+  .location >span {
+    font-weight: bold;
+    color: #48aed0;
+    
   }
 `
 export const WeatherDiv = styled.div`
@@ -99,7 +121,7 @@ export const WeatherDiv = styled.div`
   align-items: center;
   width: 90%;
   min-height: 80%;
- 
+
   margin: 0 auto;
 
   iframe {

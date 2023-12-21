@@ -1,7 +1,7 @@
 import React from 'react'
 import CuriosityPara from '../components/CuriosityPara'
 import Header from '../components/Header'
-import TextImg from '../components/TextImg'
+import HeaderImageCur from '../components/HeaderImageCur'
 
 import { RoverC, Main } from '../styles/RoverStyles'
 
@@ -12,7 +12,7 @@ function Curiosity() {
       <RoverC>
         <Header />
         <Main>
-        <TextImg/>
+        <HeaderImageCur/>
   <CuriosityPara/>
         </Main>
       </RoverC>

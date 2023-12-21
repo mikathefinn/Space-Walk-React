@@ -17,11 +17,11 @@ const Header = () => {
               <div className='dropdown-content'>
                 <div className='dropdown-submenu'>
                   <NavLinkDrop to='/Curiosity'>Curiosity</NavLinkDrop>
-                  <NavLinkDrop to='/Curiosity'>Perseverance</NavLinkDrop>
-                <div className="dropdown-submenu-content">
-                <NavLinkDrop to='/Slideshow'>Slideshow</NavLinkDrop>
+                  <NavLinkDrop to='/Perseverance'>Perseverance</NavLinkDrop>
+                  <div className='dropdown-submenu-content'>
+                    <NavLinkDrop to='/Slideshow'>Images</NavLinkDrop>
+                  </div>
                 </div>
-              </div>
               </div>
             </div>
           </li>

@@ -1,11 +1,11 @@
 import React from 'react'
-import curiosityArt from '/images/curiosity-art.jpg'
+import perseArt from '/images/perseverance-art.png'
 
-function TextImg() {
+function PerseHeaderImage() {
   return (<>
-    <h1>Curiosity</h1>
+    <h1>Perseverance</h1>
     <section className='text-img'>
-      <div>
+      <div className='para-container'>
         <p className='para-one'>
           Curiosity, NASA's Mars Science Laboratory mission rover, has
           indeed proven to be an iconic symbol of exploration and
@@ -26,11 +26,11 @@ function TextImg() {
         </p>
       </div>
       
-        <img className='curiart' src={curiosityArt} alt="Artist's view of the Curiosity" />
+        <img className='rover-art' src={perseArt} alt="Artist's view of the Curiosity" />
      
     </section>
     </>
   )
 }
 
-export default TextImg
+export default PerseHeaderImage

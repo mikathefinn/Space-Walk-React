@@ -21,7 +21,7 @@ export const LinkList = styled.ul`
     padding: 1rem 0.5rem 0.5rem 0.5rem;
     min-width: 10rem;
     background-color: rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0.8rem 1rem 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0.8rem 0 1rem 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
   }
   .dropdown:hover .dropdown-content {
@@ -40,7 +40,7 @@ export const LinkList = styled.ul`
     padding: 1rem 0.5rem 1rem 1rem;
     top: -1rem;
     left: 100%;
-    box-shadow: 0 0.8rem 1rem 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0.8rem 0 1rem 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
   }
   .dropdown-submenu:hover .dropdown-submenu-content {

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import Rovers from './pages/Rovers'
@@ -8,6 +8,7 @@ import Curiosity from './pages/Curiosity'
 import Weather from './pages/Weather'
 import Slideshow from './pages/Slideshow'
 import Facts from './pages/Facts'
+import Perseverance from './pages/Perseverance'
 import  { MarsProvider } from './Context/MarsContext'
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
               path='/'
               element={
                 <div className='wrapper-main'>
-                  {/* <Header /> */}
+                  
                   <Welcome />
                 </div>
               }
@@ -64,6 +65,14 @@ function App() {
               element={
                 <div>
                   <Facts />
+                </div>
+              }
+            />
+            <Route
+              path='/perseverance'
+              element={
+                <div>
+                  <Perseverance />
                 </div>
               }
             />
