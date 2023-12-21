@@ -97,7 +97,7 @@ export const Main = styled.main`
     border-radius: 1rem;
   }
 
-  .perse-header {
+  .persecuri-header {
     font-size: 2.8rem;
     margin: 6rem 0;
   }

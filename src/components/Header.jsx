@@ -15,13 +15,13 @@ const Header = () => {
               <NavLink to='/rovers'>Rovers</NavLink>
 
               <div className='dropdown-content'>
-                <div className='dropdown-submenu'>
+                {/* <div className='dropdown-submenu'> */}
                   <NavLinkDrop to='/Curiosity'>Curiosity</NavLinkDrop>
                   <NavLinkDrop to='/Perseverance'>Perseverance</NavLinkDrop>
-                  <div className='dropdown-submenu-content'>
-                    <NavLinkDrop to='/Slideshow'>Images</NavLinkDrop>
-                  </div>
-                </div>
+                  {/* <div className='dropdown-submenu-content'>
+                    <NavLinkDrop to='/Slideshow'>Images</NavLinkDrop> */}
+                  {/* </div> */}
+                {/* </div> */}
               </div>
             </div>
           </li>

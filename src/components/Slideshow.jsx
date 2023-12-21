@@ -1,17 +1,13 @@
 import React from 'react'
-import Header from '../components/Header'
-import Slides from '../components/Slides'
+import Header from './Header'
+import Slides from './Slides'
 
 import { Main, RoverC } from '../styles/RoverStyles'
-
 
 function Slideshow() {
   return (
     <>
-      <RoverC>
-        <Header />
-        <Main>
-          <h1>Images taken by Curiosity in Mars</h1>
+          <h2 className='persecuri-header'>Images taken by Curiosity in Mars</h2>
           <p className='para'>
             Curiosity has been diligently capturing the Martian landscape
             through hundreds of thousands of images during its mission. These
@@ -25,8 +21,7 @@ function Slideshow() {
             insights into the mysteries of our neighboring planet.
           </p>
           <Slides />
-        </Main>
-      </RoverC>
+       
     </>
   )
 }

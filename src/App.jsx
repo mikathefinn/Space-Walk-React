@@ -1,4 +1,3 @@
-
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import Rovers from './pages/Rovers'
@@ -6,10 +5,10 @@ import Welcome from './components/Welcome'
 import Header from './components/Header'
 import Curiosity from './pages/Curiosity'
 import Weather from './pages/Weather'
-import Slideshow from './pages/Slideshow'
+import Slideshow from './components/Slideshow'
 import Facts from './pages/Facts'
 import Perseverance from './pages/Perseverance'
-import  { MarsProvider } from './Context/MarsContext'
+import { MarsProvider } from './Context/MarsContext'
 
 function App() {
   return (
@@ -21,7 +20,6 @@ function App() {
               path='/'
               element={
                 <div className='wrapper-main'>
-                  
                   <Welcome />
                 </div>
               }

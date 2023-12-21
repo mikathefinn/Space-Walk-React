@@ -2,9 +2,8 @@ import React from 'react'
 import CuriosityPara from '../components/CuriosityPara'
 import Header from '../components/Header'
 import HeaderImageCur from '../components/HeaderImageCur'
-
+import Slideshow from '../components/Slideshow'
 import { RoverC, Main } from '../styles/RoverStyles'
-
 
 function Curiosity() {
   return (
@@ -12,8 +11,9 @@ function Curiosity() {
       <RoverC>
         <Header />
         <Main>
-        <HeaderImageCur/>
-  <CuriosityPara/>
+          <HeaderImageCur />
+          <CuriosityPara />
+          <Slideshow />
         </Main>
       </RoverC>
     </>
