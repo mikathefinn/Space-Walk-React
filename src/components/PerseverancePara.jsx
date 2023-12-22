@@ -4,21 +4,7 @@ import React from 'react'
 function PerseverancePara() {
   return (
     <>
-      <p className='para'>
-        Perseverance, NASA's latest rover on the Martian surface, stands as a
-        testament to human determination and technological advancement. Since
-        its touchdown in Jezero Crater in February 2021, Perseverance has been a
-        beacon of scientific curiosity and exploration, building upon the legacy
-        of its predecessor, Curiosity.
-      </p>
-      <p className='para'>
-        Perseverance shares Curiosity's autonomous capabilities, navigating the
-        Martian terrain with precision and intelligence. Equipped with enhanced
-        AI systems, Perseverance optimizes its path, avoiding obstacles, and
-        making independent decisions that contribute to its mission's success.
-        This autonomy allows the rover to adapt to the challenges presented by
-        the Martian landscape and maximize its efficiency.
-      </p>
+      
       <p className='para'>
         At the heart of Perseverance's scientific prowess is its instrument
         suite, which includes advanced tools like the SuperCam and the PIXL
@@ -31,6 +17,8 @@ function PerseverancePara() {
       <p className='para'>
       Like its predecessor Curiosity, Perseverance contributes to the photographic legacy of Mars. With its high-resolution Mastcam-Z cameras, the rover captures stunning images of the Martian landscape, offering detailed views of its surroundings. These images not only aid scientific analysis but also captivate the public, fostering a shared sense of wonder about the mysteries of the Red Planet.
       </p>
+      <p className="para">As Perseverance embarks on its mission to explore the ancient river delta in Jezero Crater, it aims to unearth evidence of past microbial life and gather data crucial for future human exploration. The rover's perseverance in the face of harsh Martian conditions underscores the resilience of both technology and human ambition.</p>
+      <p className="para">Engineers and scientists continuously collaborate to overcome challenges, ensuring the rover's longevity and functionality. Perseverance's achievements pave the way for future Mars missions, advancing our understanding of the planet's history and potential habitability. The rover's journey serves as an inspiration, emphasizing the indomitable spirit of exploration and the limitless possibilities that lie beyond Earth.</p>
     </>
   )
 }

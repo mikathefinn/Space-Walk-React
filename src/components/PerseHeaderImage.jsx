@@ -7,22 +7,10 @@ function PerseHeaderImage() {
     <section className='text-img'>
       <div className='para-container'>
         <p className='para-one'>
-          Curiosity, NASA's Mars Science Laboratory mission rover, has
-          indeed proven to be an iconic symbol of exploration and
-          technological prowess. Since its remarkable landing in Gale
-          Crater in 2012, Curiosity has not only surpassed its expected
-          mission duration but has also provided a wealth of data that
-          continues to fuel scientific inquiry and reshape our
-          comprehension of the Martian landscape.
+        Perseverance, NASA's latest rover on the Martian surface, stands as a testament to human determination and technological advancement. Since its touchdown in Jezero Crater in February 2021, Perseverance has been a beacon of scientific curiosity and exploration, building upon the legacy of its predecessor, Curiosity.
         </p>
         <p className='para-one'>
-          One of the key features that distinguishes Curiosity is its
-          autonomous capabilities. The rover is equipped with advanced AI
-          algorithms that enable it to make decisions on its own, allowing
-          it to navigate the Martian terrain, avoid obstacles, and select
-          intriguing targets for further study. This autonomy has
-          significantly enhanced the rover's efficiency and responsiveness
-          to the dynamic challenges of the Red Planet.
+        Perseverance shares Curiosity's autonomous capabilities, navigating the Martian terrain with precision and intelligence. Equipped with enhanced AI systems, Perseverance optimizes its path, avoiding obstacles, and making independent decisions that contribute to its mission's success. This autonomy allows the rover to adapt to the challenges presented by the Martian landscape and maximize its efficiency.
         </p>
       </div>
       

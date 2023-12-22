@@ -68,7 +68,7 @@ export const Main = styled.main`
     width: 80%;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     margin-bottom: 2rem;
   }
   .para-one {
