@@ -55,9 +55,11 @@ export const MarsProvider = ({ children }) => {
 
   const [startDate, setStartDate] = useState(new Date())
   const [data, setData] = useState(null)
-
+  
   //create a SET for unique camera names  - duplicates won't be added AUTOMATICALLY
   const [cameras, setCameras] = useState(new Set())
+  //camerasArray to hold the array representation of the cameras Set
+  const [camerasArray, setCamerasArray] = useState([]);
 
   const formatDate = (date) => {
     const year = date.getFullYear()
@@ -68,32 +70,42 @@ export const MarsProvider = ({ children }) => {
   }
 
   const handleDateChange = (date) => {
-    //date is the date selected and it's provided automatically by the DatePicker
     setStartDate(date)
-    const formattedDate = formatDate(date)
-    console.log('Formatted Date:', formattedDate)
-    async function getOptionsForDate() {
+  }
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const formattedDate = formatDate(startDate)
+      console.log('Formatted Date:', formattedDate)
+
       try {
         const response = await fetch(
           `https://api.nasa.gov/mars-photos/api/v1/rovers/perseverance/photos?api_key=ew009QLOkglDGuTtrFtdyQy8oCVTw2KI7gf4VOzQ&earth_date=${formattedDate}`
         )
-        setData(await response.json())
+        const responseData = await response.json()
+        setData(responseData)
 
-        console.log('data from api call', data)
+        console.log('data from api call', responseData)
 
-        data.photos.forEach((item) => {
-          //add camera names to the Set
-          cameras.add(item.camera.full_name)
+        responseData.photos.forEach((item) => {
+          // add camera names to the Set
+          //Set needs to be changed to an array for further manipulation
+          setCameras(
+            (prevCameras) => new Set([...prevCameras, item.camera.full_name])
+          )
         })
-
-        //create an array from the Set
-        const camerasArray = Array.from(cameras)
       } catch (error) {
         console.log('error fetching data', error)
       }
     }
-    getOptionsForDate()
-  }
+    fetchData()
+  }, [startDate])
+
+  //create a cameras array and update camerasArray whenever cameras set changes
+  useEffect(() => {
+    setCamerasArray(Array.from(cameras));
+    console.log('the array', camerasArray)
+  }, [cameras]);
 
   return (
     <MarsContext.Provider
