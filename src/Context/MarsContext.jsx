@@ -49,6 +49,35 @@ export const MarsProvider = ({ children }) => {
     }
   }
 
+  const [startDate, setStartDate] = useState(new Date())
+
+  const formatDate = (date) => {
+    const year = date.getFullYear();
+    const month = (date.getMonth() + 1).toString().padStart(2, '0'); // Months are zero-based
+    const day = date.getDate().toString().padStart(2, '0');
+  
+    return `${year}-${month}-${day}`;
+  };
+
+  const handleDateChange = (date) => {
+    //date is the date selected and it's provided automatically by the DatePicker
+    setStartDate(date)
+    const formattedDate = formatDate(date)
+    console.log('Formatted Date:', formattedDate)
+    async function getOptionsForDate() {
+      try {
+        const response = await fetch(
+          `https://api.nasa.gov/mars-photos/api/v1/rovers/perseverance/photos?api_key=ew009QLOkglDGuTtrFtdyQy8oCVTw2KI7gf4VOzQ&earth_date=${formattedDate}`
+        )
+        const data = await response.json()
+        console.log('data from api call', data)
+      } catch (error) {
+        console.log('error fetching data', error)
+      }
+    }
+    getOptionsForDate()
+  }
+
   return (
     <MarsContext.Provider
       value={{
@@ -61,6 +90,9 @@ export const MarsProvider = ({ children }) => {
         camera,
         setCamera,
         getAndDisplayImage,
+        startDate,
+        setStartDate,
+        handleDateChange,
       }}>
       {children}
     </MarsContext.Provider>

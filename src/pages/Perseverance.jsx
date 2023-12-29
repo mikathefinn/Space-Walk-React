@@ -3,7 +3,7 @@ import PerseHeaderImage from '../components/PerseHeaderImage'
 import PerseverancePara from '../components/PerseverancePara'
 import Header from '../components/Header'
 import PerseveranceMap from '../components/PerseveranceMap'
-
+import PerseveranceForm from '../components/PerseveranceForm'
 
 import { RoverC, Main } from '../styles/RoverStyles'
 
@@ -16,6 +16,7 @@ function Perseverance() {
           <PerseHeaderImage/>
           <PerseverancePara />
          <PerseveranceMap/>
+         <PerseveranceForm />
         </Main>
       </RoverC>
     </>

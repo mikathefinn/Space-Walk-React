@@ -1,5 +1,4 @@
 import React from 'react'
-import { useState } from 'react'
 import { LinkList, Nav, NavLink, NavLinkDrop } from '../styles/HeaderStyles'
 
 const Header = () => {
