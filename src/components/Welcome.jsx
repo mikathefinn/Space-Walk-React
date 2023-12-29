@@ -16,11 +16,10 @@ const Headers = styled.div`
   letter-spacing: 0.7rem;
   opacity: ${({ isVisible }) => (isVisible ? '1' : '0')};
   filter: blur(${({ isVisible }) => (isVisible ? '0' : '5px')});
-  transition: opacity 3s ease, filter 4.5s ease;
+  transition: opacity 2s ease, filter 4.5s ease;
 
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  justify-content:center;
   align-items: center;
 
   h2 {
@@ -32,10 +31,12 @@ const Headers = styled.div`
   }
   .wrap {
     display: flex;
+    flex: 1;
     align-items: center;
+    justify-content: space-around;
   }
   .wrap:first-child {
-    flex-basis: 50%;
+    max-width: 50%;
   }
   
 `

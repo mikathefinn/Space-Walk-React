@@ -14,7 +14,7 @@ function PerseHeaderImage() {
         </p>
       </div>
       
-        <img className='rover-art' src={perseArt} alt="Artist's view of the Curiosity" />
+        <img className='rover-art' src={perseArt} alt="Artist's view of Perseverance" />
      
     </section>
     </>

@@ -92,9 +92,10 @@ export const Main = styled.main`
     max-width: 50%;
   }
   .rover-art {
-    max-width: 50%;
-    padding: 0 1rem;
+    max-width: 40%;
     border-radius: 1rem;
+    padding: 0 3rem;
+    
   }
 
   .persecuri-header {
