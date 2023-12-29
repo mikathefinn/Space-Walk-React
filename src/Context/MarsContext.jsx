@@ -54,6 +54,10 @@ export const MarsProvider = ({ children }) => {
   // ************ PERSEVERANCE ********************/
 
   const [startDate, setStartDate] = useState(new Date())
+  const [data, setData] = useState(null)
+
+  //create a SET for unique camera names  - duplicates won't be added AUTOMATICALLY
+  const [cameras, setCameras] = useState(new Set())
 
   const formatDate = (date) => {
     const year = date.getFullYear()
@@ -73,16 +77,15 @@ export const MarsProvider = ({ children }) => {
         const response = await fetch(
           `https://api.nasa.gov/mars-photos/api/v1/rovers/perseverance/photos?api_key=ew009QLOkglDGuTtrFtdyQy8oCVTw2KI7gf4VOzQ&earth_date=${formattedDate}`
         )
-        const data = await response.json()
-        console.log('data from api call', data)
+        setData(await response.json())
 
-        //create a SET for unique camera names  - duplicates won't be added AUTOMATICALLY
-        const cameras = new Set()
+        console.log('data from api call', data)
 
         data.photos.forEach((item) => {
           //add camera names to the Set
           cameras.add(item.camera.full_name)
         })
+
         //create an array from the Set
         const camerasArray = Array.from(cameras)
       } catch (error) {

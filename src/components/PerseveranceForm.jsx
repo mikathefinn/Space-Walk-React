@@ -14,8 +14,10 @@ function PerseveranceForm() {
 
   return (
     <>
-    {/* DatePicker automatically passes the date as a prop to handleDateChange function */}
-      <DatePicker selected={startDate} onChange={handleDateChange} />
+      <form>
+        {/* DatePicker automatically passes the date as a prop to handleDateChange function */}
+        <DatePicker selected={startDate} onChange={handleDateChange} />
+      </form>
     </>
   )
 }
