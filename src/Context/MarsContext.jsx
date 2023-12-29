@@ -4,6 +4,8 @@ import placeholder from '/images/rover-placeholder.jpeg'
 const MarsContext = createContext()
 
 export const MarsProvider = ({ children }) => {
+  //*******************CURIOSITY**************/
+
   const [slideshowImage, setSlideshowImage] = useState(placeholder)
   const [date, setDate] = useState('')
   const [sol, setSol] = useState('')
@@ -22,10 +24,10 @@ export const MarsProvider = ({ children }) => {
 
       const randomSol =
         filteredData[Math.floor(Math.random() * filteredData.length)].sol
-
       const photosResponse = await fetch(
         `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=${randomSol}&api_key=ew009QLOkglDGuTtrFtdyQy8oCVTw2KI7gf4VOzQ`
       )
+
       const photosData = await photosResponse.json()
       //photosData.photos is an array of objects from a randomly selected sol
       //that has FHAZ images -- filter through to get only those images
@@ -49,15 +51,17 @@ export const MarsProvider = ({ children }) => {
     }
   }
 
+  // ************ PERSEVERANCE ********************/
+
   const [startDate, setStartDate] = useState(new Date())
 
   const formatDate = (date) => {
-    const year = date.getFullYear();
-    const month = (date.getMonth() + 1).toString().padStart(2, '0'); // Months are zero-based
-    const day = date.getDate().toString().padStart(2, '0');
-  
-    return `${year}-${month}-${day}`;
-  };
+    const year = date.getFullYear()
+    const month = (date.getMonth() + 1).toString().padStart(2, '0') // Months are zero-based
+    const day = date.getDate().toString().padStart(2, '0')
+
+    return `${year}-${month}-${day}`
+  }
 
   const handleDateChange = (date) => {
     //date is the date selected and it's provided automatically by the DatePicker
@@ -71,6 +75,16 @@ export const MarsProvider = ({ children }) => {
         )
         const data = await response.json()
         console.log('data from api call', data)
+
+        //create a SET for unique camera names  - duplicates won't be added AUTOMATICALLY
+        const cameras = new Set()
+
+        data.photos.forEach((item) => {
+          //add camera names to the Set
+          cameras.add(item.camera.full_name)
+        })
+        //create an array from the Set
+        const camerasArray = Array.from(cameras)
       } catch (error) {
         console.log('error fetching data', error)
       }
