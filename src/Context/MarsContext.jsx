@@ -55,11 +55,11 @@ export const MarsProvider = ({ children }) => {
 
   const [startDate, setStartDate] = useState(new Date())
   const [data, setData] = useState(null)
-  
+
   //create a SET for unique camera names  - duplicates won't be added AUTOMATICALLY
   const [cameras, setCameras] = useState(new Set())
   //camerasArray to hold the array representation of the cameras Set
-  const [camerasArray, setCamerasArray] = useState([]);
+  const [camerasArray, setCamerasArray] = useState([])
 
   const formatDate = (date) => {
     const year = date.getFullYear()
@@ -101,11 +101,11 @@ export const MarsProvider = ({ children }) => {
     fetchData()
   }, [startDate])
 
-  //create a cameras array and update camerasArray whenever cameras set changes
+  //create a cameras array and update camerasArray whenever cameras Set changes
   useEffect(() => {
-    setCamerasArray(Array.from(cameras));
+    setCamerasArray(Array.from(cameras))
     console.log('the array', camerasArray)
-  }, [cameras]);
+  }, [cameras])
 
   return (
     <MarsContext.Provider
@@ -120,7 +120,7 @@ export const MarsProvider = ({ children }) => {
         setCamera,
         getAndDisplayImage,
         startDate,
-        setStartDate,
+        camerasArray,
         handleDateChange,
       }}>
       {children}

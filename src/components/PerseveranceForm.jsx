@@ -5,18 +5,25 @@ import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
 
 function PerseveranceForm() {
-  const { startDate, setStartDate, handleDateChange } = useContext(MarsContext)
+  const { startDate, camerasArray, handleDateChange } = useContext(MarsContext)
 
-  //useEffect to work with the updated value of startDate
-  useEffect(() => {
-    console.log('Inside useEffect', startDate)
-  }, [startDate])
 
   return (
     <>
       <form>
         {/* DatePicker automatically passes the date as a prop to handleDateChange function */}
+        Choose a date:
         <DatePicker selected={startDate} onChange={handleDateChange} />
+        <label htmlFor='cameras'>Choose a camera</label>
+        <select id='cameras' name='cameras'>
+          {camerasArray.map((camera, index)=>(
+            <option key={index} value={camera}>
+              {camera}
+            </option>
+
+          ))}
+        </select>
+
       </form>
     </>
   )
