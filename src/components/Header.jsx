@@ -11,8 +11,7 @@ const Header = () => {
           </li>
           <li>
             <div className='dropdown'>
-              <NavLink to='/rovers'>Rovers</NavLink>
-
+             Rovers
               <div className='dropdown-content'>
                 {/* <div className='dropdown-submenu'> */}
                   <NavLinkDrop to='/Curiosity'>Curiosity</NavLinkDrop>

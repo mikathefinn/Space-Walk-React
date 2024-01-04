@@ -1,8 +1,8 @@
 import React, { useContext, useState, useEffect } from 'react'
-import MarsContext from '../Context/MarsContext'
+import MarsContext from '../../Context/MarsContext'
 
 function Button() {
-  const { getAndDisplayImage,  setDate,  setSol, setCamera } =
+  const { getAndDisplayImage, setDate, setSol, setCamera } =
     useContext(MarsContext)
 
   const [slideshow, setSlideshow] = useState(false)

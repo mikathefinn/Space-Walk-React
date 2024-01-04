@@ -39,8 +39,6 @@ export const MarsProvider = ({ children }) => {
       //choose the source url of a random image from the filteredPhotos
       const randomImgObj =
         filteredPhotos[Math.floor(Math.random() * filteredPhotos.length)]
-
-      console.log(randomImgObj)
       setSlideshowImage(randomImgObj.img_src)
       // set the data to be displayed
       setDate(`Earth date: ${randomImgObj.earth_date}`)

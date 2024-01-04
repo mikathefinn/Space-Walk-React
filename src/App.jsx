@@ -1,13 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-
-import Rovers from './pages/Rovers'
-import Welcome from './components/Welcome'
-import Header from './components/Header'
-import Curiosity from './pages/Curiosity'
+import Welcome from './pages/Welcome'
+import Curiosity from './pages/curiosity/Curiosity'
 import Weather from './pages/Weather'
-import Slideshow from './components/Slideshow'
 import Facts from './pages/Facts'
-import Perseverance from './pages/Perseverance'
+import Perseverance from './pages/perseverance/Perseverance'
 import { MarsProvider } from './Context/MarsContext'
 
 function App() {
@@ -24,14 +20,7 @@ function App() {
                 </div>
               }
             />
-            <Route
-              path='/rovers'
-              element={
-                <div>
-                  <Rovers />
-                </div>
-              }
-            />
+
             <Route
               path='/curiosity'
               element={
@@ -50,14 +39,6 @@ function App() {
               }
             />
 
-            <Route
-              path='/slideshow'
-              element={
-                <div>
-                  <Slideshow />
-                </div>
-              }
-            />
             <Route
               path='/facts'
               element={

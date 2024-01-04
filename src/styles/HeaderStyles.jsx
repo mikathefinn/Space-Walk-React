@@ -14,6 +14,7 @@ export const LinkList = styled.ul`
     position: relative;
     display: inline-block;
     padding-bottom: 0.5rem;
+    font-size: medium;
   }
   .dropdown-content {
     display: none;
@@ -52,7 +53,6 @@ export const Nav = styled.nav`
 `
 export const NavLink = styled(Link)`
   text-decoration: none;
-  font-size: 2rem;
   font-size: medium;
   color: white;
   position: relative;
@@ -75,6 +75,7 @@ export const NavLink = styled(Link)`
     }
   }
 `
+
 export const NavLinkDrop = styled(Link)`
   text-decoration: none;
   padding: 1rem;

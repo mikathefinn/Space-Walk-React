@@ -1,15 +1,7 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-export const Rover = styled.div`
-  height: 100vh;
-  color: white;
-  background-image: url('public/images/mars-bg.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-  padding-bottom: 3rem;
-`
+
 export const RoverC = styled.div`
   min-height: 100vh;
   color: white;
@@ -24,9 +16,7 @@ export const Main = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%;
-  min-height: 80%;
-  margin: 0 auto;
+  margin: 0 8rem;
   background-color: #3232327c;
   border-radius: 0.5rem;
 
