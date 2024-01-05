@@ -6,9 +6,9 @@ export const SlideshowStyles = styled.section`
   align-items: center;
   gap: 4rem;
   .latest-image {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
   }
-  .latest-image img {
+  #rover-img {
     max-width: 50rem;
     max-height: 30rem;
     border-radius: 0.7rem;
@@ -33,5 +33,22 @@ export const SlideshowStyles = styled.section`
     font-size: 1.7rem;
     border: none;
     box-shadow: 0.1rem 0.1rem 0.2rem #483d2f;
+  }
+  form {
+    display: flex;
+    gap: 2rem;
+  }
+
+  h2 {
+    font-size: 2.8rem;
+  }
+  .images-intro {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+    width: 80%;
   }
 `

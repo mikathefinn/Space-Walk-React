@@ -26,7 +26,7 @@ function Slides() {
       <SlideshowStyles>
         <Button />
         <figure className='latest-image'>
-          <img id='curiosity-img' src={slideshowImage} alt='Images from Mars' />
+          <img id='rover-img' src={slideshowImage} alt='Images from Mars' />
         </figure>
         <ImageData />
       </SlideshowStyles>

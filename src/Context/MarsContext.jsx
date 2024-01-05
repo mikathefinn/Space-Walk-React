@@ -70,10 +70,7 @@ const [selectedImage, setSelectedImage] = useState(placeholder)
     return `${year}-${month}-${day}`
   }
 
-  const handleDateChange = (date) => {
-    setStartDate(date)
-  }
-
+ 
   useEffect(() => {
     const fetchData = async () => {
       const formattedDate = formatDate(startDate)
@@ -134,9 +131,8 @@ const [selectedImage, setSelectedImage] = useState(placeholder)
         camera,
         setCamera,
         getAndDisplayImage,
-        startDate,
+        startDate, setStartDate,
         camerasArray,
-        handleDateChange,
         setSelectedCamera, selectedImage
         
       }}>
