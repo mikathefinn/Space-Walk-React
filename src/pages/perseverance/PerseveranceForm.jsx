@@ -5,8 +5,13 @@ import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
 
 function PerseveranceForm() {
-  const { startDate, camerasArray, handleDateChange } = useContext(MarsContext)
+  const { startDate, camerasArray, handleDateChange, setSelectedCamera, selectedImage } = useContext(MarsContext)
 
+
+  const handleCameraChange = (event) => {
+    // Update the selected camera when the dropdown changes
+    setSelectedCamera(event.target.value);
+  };
   return (
     <>
       <form>
@@ -14,7 +19,7 @@ function PerseveranceForm() {
         Choose a date:
         <DatePicker selected={startDate} onChange={handleDateChange} />
         <label htmlFor='cameras'>Choose a camera</label>
-        <select id='cameras' name='cameras'>
+        <select id='cameras' name='cameras' onChange={handleCameraChange}>
           {camerasArray.map((camera, index) => (
             <option key={index} value={camera}>
               {camera}
@@ -22,6 +27,9 @@ function PerseveranceForm() {
           ))}
         </select>
       </form>
+      <figure>
+          <img id='perseverance-img' src={selectedImage} alt='Image from Mars' />
+        </figure>
     </>
   )
 }

@@ -5,6 +5,7 @@ import Header from '../../components/Header'
 import PerseveranceMap from './PerseveranceMap'
 import PerseveranceForm from './PerseveranceForm'
 
+
 import { RoverC, Main } from '../../styles/RoverStyles'
 
 function Perseverance() {
@@ -17,6 +18,7 @@ function Perseverance() {
           <PerseverancePara />
           <PerseveranceMap />
           <PerseveranceForm />
+          
         </Main>
       </RoverC>
     </>

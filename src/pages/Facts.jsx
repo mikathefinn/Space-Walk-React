@@ -1,11 +1,11 @@
 import React from 'react'
 import Header from '../components/Header'
-import { Rover, Main } from '../styles/RoverStyles'
+import { RoverC, Main } from '../styles/RoverStyles'
 
 function Facts() {
   return (
     <>
-      <Rover>
+      <RoverC>
         <Header />
         <Main>
           <h1>Mars - The Red Planet</h1>
@@ -18,7 +18,7 @@ function Facts() {
           <p className="para">Mars, a prominent celestial object in Earth's sky, has been observed since ancient times due to its high-contrast albedo features. Exploration efforts intensified in the late 20th century, with uncrewed spacecraft and rovers. Mariner 4 executed the first flyby in 1965, followed by the Mars 2 orbiter in 1971 and the Viking 1 lander in 1976. As of 2023, at least 11 active probes orbit or reside on the Martian surface. Mars continues to captivate scientific interest and serves as an appealing target for future human missions.
 </p>
         </Main>
-      </Rover>
+      </RoverC>
     </>
   )
 }

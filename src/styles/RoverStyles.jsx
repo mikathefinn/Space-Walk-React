@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-
 export const RoverC = styled.div`
   min-height: 100vh;
   color: white;
@@ -85,7 +84,6 @@ export const Main = styled.main`
     max-width: 40%;
     border-radius: 1rem;
     padding: 0 3rem;
-    
   }
 
   .persecuri-header {
@@ -95,14 +93,13 @@ export const Main = styled.main`
   .perse-map {
     margin-bottom: 3rem;
   }
-  .location{
+  .location {
     width: 80%;
     margin-bottom: 4rem;
   }
-  .location >span {
+  .location > span {
     font-weight: bold;
     color: #48aed0;
-    
   }
 `
 export const WeatherDiv = styled.div`
@@ -110,10 +107,8 @@ export const WeatherDiv = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 90%;
-  min-height: 80%;
-
-  margin: 0 auto;
+  height: 70vh;
+margin-top: 2rem;
 
   iframe {
     width: 100rem;

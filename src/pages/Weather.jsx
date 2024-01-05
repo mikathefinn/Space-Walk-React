@@ -1,11 +1,11 @@
 import React from 'react'
 import Header from '../components/Header'
-import { Rover, WeatherDiv } from '../styles/RoverStyles'
+import { RoverC, WeatherDiv } from '../styles/RoverStyles'
 
 function Weather() {
   return (
     <>
-      <Rover>
+      <RoverC>
         <Header />
         <WeatherDiv>
         
@@ -15,7 +15,7 @@ function Weather() {
               frameborder='0'></iframe>
          
           </WeatherDiv>
-      </Rover>
+      </RoverC>
     </>
   )
 }

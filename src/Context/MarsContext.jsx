@@ -58,6 +58,9 @@ export const MarsProvider = ({ children }) => {
   const [cameras, setCameras] = useState(new Set())
   //camerasArray to hold the array representation of the cameras Set
   const [camerasArray, setCamerasArray] = useState([])
+  //selectedCamera is the camera selected from the dropdown menu in PerseveranceForm
+  const [selectedCamera, setSelectedCamera] = useState(null)
+const [selectedImage, setSelectedImage] = useState(placeholder)
 
   const formatDate = (date) => {
     const year = date.getFullYear()
@@ -74,7 +77,6 @@ export const MarsProvider = ({ children }) => {
   useEffect(() => {
     const fetchData = async () => {
       const formattedDate = formatDate(startDate)
-      console.log('Formatted Date:', formattedDate)
 
       try {
         const response = await fetch(
@@ -82,8 +84,6 @@ export const MarsProvider = ({ children }) => {
         )
         const responseData = await response.json()
         setData(responseData)
-
-        console.log('data from api call', responseData)
 
         responseData.photos.forEach((item) => {
           // add camera names to the Set
@@ -102,8 +102,25 @@ export const MarsProvider = ({ children }) => {
   //create a cameras array and update camerasArray whenever cameras Set changes
   useEffect(() => {
     setCamerasArray(Array.from(cameras))
-    console.log('the array', camerasArray)
   }, [cameras])
+
+
+  useEffect(() => {
+    
+    if (selectedCamera !== null && selectedCamera !== undefined) {
+      
+      const filtered = data.photos.filter((item) => {
+        const cameraFullName = item.camera.full_name
+        return selectedCamera && cameraFullName.includes(selectedCamera)
+      })
+  
+      setSelectedImage(filtered[Math.floor(Math.random() * filtered.length)].img_src)
+  
+       
+    }
+
+
+  }, [selectedCamera])
 
   return (
     <MarsContext.Provider
@@ -120,6 +137,8 @@ export const MarsProvider = ({ children }) => {
         startDate,
         camerasArray,
         handleDateChange,
+        setSelectedCamera, selectedImage
+        
       }}>
       {children}
     </MarsContext.Provider>
