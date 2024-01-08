@@ -20,24 +20,7 @@ function PerseveranceForm() {
     // Update the selected camera when the dropdown changes
     setSelectedCamera(event.target.value)
   }
-  const css = `
-  .myselected:not([disabled])
-  {
-    font-weight: bold;
-    border: 2px solid orange;
-  }
-  
-  .my-selected:hover:not([disabled]) { 
-    border-color: #ff9d00;
-    background-color: #ff9d00; 
-    color: #ff9d00;
-  }
-  .my-today { 
-    font-weight: bold;
-    font-size: 140%; 
-    color: red;
-  }
-  `
+
 
   return (
     <>
@@ -53,18 +36,12 @@ function PerseveranceForm() {
         </div>
         <form>
           <div className='wrap'>
-            <style>{css}</style>
+            
             <DayPicker
               mode='single'
               selected={startDate}
               onSelect={setStartDate}
-              modifiersClassNames={{
-                selected: 'my-selected',
-                today: 'my-today',
-              }}
-              modifiersStyles={{
-                disabled: { fontSize: '75%' },
-              }}
+            
               footer='Select a date first, then choose a camera from the dropdown menu.'
             />
 

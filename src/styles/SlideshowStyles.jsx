@@ -39,7 +39,7 @@ export const SlideshowStyles = styled.section`
     width: 50%;
     padding: 1rem 3rem;
     border-radius: 3rem;
-    letter-spacing: 0.18rem;  
+    letter-spacing: 0.18rem; 
     box-shadow: 0.3rem 0.3rem 0.5rem #483d2f;
   }
   form {
@@ -58,5 +58,21 @@ export const SlideshowStyles = styled.section`
     gap: 2rem;
     justify-content: center;
     width: 80%;
+  }
+  .rdp-day_selected,
+.rdp-day_selected:focus-visible,
+.rdp-day_selected:hover {
+  color: white;
+  opacity: 1;
+  background-color: #48aed0 ;}
+
+  .rdp-button:hover:not([disabled]):not(.rdp-day_selected) { 
+    border-color: #ff9d00;
+    background-color: #ff9d00; 
+    color: white;
+  }
+  .rdp-day_today:not(.rdp-day_outside):not(.rdp-day_selected) {
+    font-weight: bold;
+    color: red;
   }
 `
