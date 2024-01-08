@@ -35,7 +35,7 @@ function Button() {
 
   return (
     <>
-      <button onClick={handleClick}>{buttonText}</button>
+      <button className='slideshow-button' onClick={handleClick}>{buttonText}</button>
     </>
   )
 }

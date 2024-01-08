@@ -23,7 +23,7 @@ export const SlideshowStyles = styled.section`
   .data:last-child {
     margin-bottom: 3rem;
   }
-  button {
+  .slideshow-button {
     width: 80%;
     padding: 1rem 3rem;
     border-radius: 3rem;
@@ -33,6 +33,14 @@ export const SlideshowStyles = styled.section`
     font-size: 1.7rem;
     border: none;
     box-shadow: 0.1rem 0.1rem 0.2rem #483d2f;
+  }
+  
+  button {
+    width: 50%;
+    padding: 1rem 3rem;
+    border-radius: 3rem;
+    letter-spacing: 0.18rem;  
+    box-shadow: 0.3rem 0.3rem 0.5rem #483d2f;
   }
   form {
     display: flex;
