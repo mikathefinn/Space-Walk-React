@@ -59,6 +59,13 @@ export const SlideshowStyles = styled.section`
     justify-content: center;
     width: 80%;
   }
+.rdp {
+  margin-bottom: 4rem;
+}
+.td {
+  margin-top: 8rem;
+}
+
   .rdp-day_selected,
 .rdp-day_selected:focus-visible,
 .rdp-day_selected:hover {
